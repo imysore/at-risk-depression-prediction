@@ -96,15 +96,14 @@ def predict():
     else:
         try:
             loader = instaloader.Instaloader()
-            filepath = r'/Users/ishanmysore/Documents/DepressionWebDevelopment/imysore-depressionprediction/cooldude23571113'
             # Load session (only if you've previously logged in)
             try:
-                loader.load_session_from_file('cooldude23571113', filepath)
+                loader.load_session_from_file('cooldude23571113','cooldude23571113')
             except FileNotFoundError:
                 # If no session file, login once
                 loader.context.log("Login session not found, logging in...")
                 loader.login('cooldude23571113', '23571113')
-                loader.save_session_to_file('cooldude23571113',filepath)
+                loader.save_session_to_file('cooldude23571113','cooldude23571113')
             profile = instaloader.Profile.from_username(loader.context, handle) # get the user profile
             count = 0       # count of posts
             X_test = []     # list to store posts
